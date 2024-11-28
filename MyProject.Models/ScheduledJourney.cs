@@ -5,13 +5,12 @@ namespace MyProject.Models{
     public int BusID { get; set; } // Foreign Key
     public int RouteID { get; set; } // Foreign Key
     public DateTime ExpDeparture { get; set; }
-    public DateTime? ActDeparture { get; set; } // Nullable
+    public DateTime? ActDeparture { get; set; } 
     public DateTime ExpArrival { get; set; }
-    public DateTime? ActArrival { get; set; } // Nullable
-    public int CurrentRoadID { get; set; } // Foreign Key
-    public int NextRoadID { get; set; } // Foreign Key
-    public int PreviousRoadID { get; set; } // Foreign Key
-    public string Status { get; set; }
-}
+    public DateTime? ActArrival { get; set; } 
 
+
+    public Bus? Bus { get; set; } 
+    public BusRoute? BusRoute { get; set; } 
+}
 }
