@@ -8,10 +8,7 @@ namespace MyProject.Data{
     public DateTime? ActDeparture { get; set; }
     public DateTime ExpArrival { get; set; }
     public DateTime? ActArrival { get; set; }
-    public int CurrentRoadID { get; set; }
-    public int NextRoadID { get; set; }
-    public int PreviousRoadID { get; set; }
-    public string? Status { get; set; }
+    public required BusDTO busDTO { get; set; }
+    public required BusRouteDTO busRouteDTO { get; set; }
 }
-
 }

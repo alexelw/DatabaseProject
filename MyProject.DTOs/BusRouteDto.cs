@@ -16,7 +16,9 @@ namespace MyProject.Data{
 
 
     public ICollection<ScheduledJourneyDTO>? ScheduledJourneyDTOs { get; set; } =new List<ScheduledJourneyDTO>();
-    
     public ICollection<PopularityDTO>? PopularityDTOs { get; set; } =new List<PopularityDTO>();
+    public ICollection<StopSequenceDTO>? stopSequenceDTOs { get; set; } =new List<StopSequenceDTO>();
+    public ICollection<BusLocationDTO>? busLocationDTOs { get; set; } =new List<BusLocationDTO>();
+
 }
 }

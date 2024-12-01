@@ -5,6 +5,10 @@ namespace MyProject.Models{
     public int RouteID { get; set; } // Foreign Key
     public int StopID { get; set; } // Foreign Key
     public int StopOrder { get; set; }
+
+
+    public required BusRoute  busRoute{ get; set; } 
+    public required BusStop busStop { get; set; }
 }
 
 }

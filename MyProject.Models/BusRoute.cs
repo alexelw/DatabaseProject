@@ -18,5 +18,8 @@ public class BusRoute
 
     public ICollection<ScheduledJourney>? ScheduledJourneys { get; set; } =new List<ScheduledJourney>();
     public ICollection<StopSequence>? StopSequence { get; set; } =new List<StopSequence>();
+    public ICollection<StopSequence>? stopSequences { get; set; } =new List<StopSequence>();
+    public ICollection<BusLocation>? busLocations { get; set; } =new List<BusLocation>();
+
 }
 }

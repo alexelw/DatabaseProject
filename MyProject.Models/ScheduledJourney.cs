@@ -8,9 +8,7 @@ namespace MyProject.Models{
     public DateTime? ActDeparture { get; set; } 
     public DateTime ExpArrival { get; set; }
     public DateTime? ActArrival { get; set; } 
-
-
-    public Bus? Bus { get; set; } 
-    public BusRoute? BusRoute { get; set; } 
+    public required Bus Bus { get; set; } 
+    public required BusRoute BusRoute { get; set; } 
 }
 }
