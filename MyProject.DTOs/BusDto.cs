@@ -4,6 +4,7 @@ using MyProject.Enums;
 namespace MyProject.Data{
     public class BusDTO
 {
+    [Key] 
     public int BusID { get; set; } //primary key
 
     [Required]

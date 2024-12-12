@@ -5,6 +5,7 @@ namespace MyProject.Models
 {
 public class Bus
 {
+    [Key] 
     public int BusID { get; set; } //primary key
 
     [Required]

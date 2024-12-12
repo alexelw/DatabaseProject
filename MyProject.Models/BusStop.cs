@@ -4,6 +4,7 @@ namespace MyProject.Models{
 
     public class BusStop
     {
+        [Key] 
         public int BusStopID { get; set; } 
         [Required]
         [MaxLength(50)] 

@@ -10,7 +10,7 @@ public class MappingProfile : Profile
         CreateMap<Bus, BusDTO>().ReverseMap();
         
         // Route mappings
-        CreateMap<Route, RouteDTO>().ReverseMap();
+        CreateMap<BusRoute, BusRouteDTO>().ReverseMap();
         
         // BusStop mappings
         CreateMap<BusStop, BusStopDTO>().ReverseMap();

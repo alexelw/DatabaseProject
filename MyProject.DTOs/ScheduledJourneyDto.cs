@@ -1,6 +1,9 @@
+using System.ComponentModel.DataAnnotations;
+
 namespace MyProject.Data{
     public class ScheduledJourneyDTO
 {
+    [Key] 
     public int JourneyID { get; set; }
     public int BusID { get; set; }
     public int RouteID { get; set; }

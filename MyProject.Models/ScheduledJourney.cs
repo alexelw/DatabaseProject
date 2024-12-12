@@ -1,6 +1,9 @@
+using System.ComponentModel.DataAnnotations;
+
 namespace MyProject.Models{
     public class ScheduledJourney
 {
+    [Key] 
     public int JourneyID { get; set; } // Primary Key
     public int BusID { get; set; } // Foreign Key
     public int RouteID { get; set; } // Foreign Key

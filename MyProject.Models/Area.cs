@@ -5,6 +5,7 @@ namespace MyProject.Models
 {
 public class Area
 {
+    [Key] 
     public int AreaID { get; set; } // Primary Key
     
     [Required]

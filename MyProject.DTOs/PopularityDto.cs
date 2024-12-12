@@ -1,8 +1,10 @@
+using System.ComponentModel.DataAnnotations;
 using MyProject.Enums;
 
 namespace MyProject.Data{
     public class PopularityDTO
 {
+    [Key] 
     public int PopularityID { get; set; }
     public int StopID { get; set; } 
     public int RouteID { get; set; } 

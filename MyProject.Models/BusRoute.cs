@@ -5,6 +5,7 @@ namespace MyProject.Models
 {
 public class BusRoute
 {
+    [Key] 
     public int RouteID { get; set; } // Primary Key
 
     [Required]
@@ -17,7 +18,7 @@ public class BusRoute
 
 
     public ICollection<ScheduledJourney>? ScheduledJourneys { get; set; } =new List<ScheduledJourney>();
-    public ICollection<StopSequence>? StopSequence { get; set; } =new List<StopSequence>();
+    public ICollection<Popularity>? popularity { get; set; } =new List<Popularity>();
     public ICollection<StopSequence>? stopSequences { get; set; } =new List<StopSequence>();
     public ICollection<BusLocation>? busLocations { get; set; } =new List<BusLocation>();
 

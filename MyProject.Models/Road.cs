@@ -3,6 +3,7 @@ using System.ComponentModel.DataAnnotations;
 namespace MyProject.Models{
     public class Road
 {
+    [Key] 
     public int RoadID { get; set; } 
     [Required]
     [MaxLength(50)] 

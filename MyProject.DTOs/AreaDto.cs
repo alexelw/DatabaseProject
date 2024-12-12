@@ -3,6 +3,7 @@ using System.ComponentModel.DataAnnotations;
 namespace MyProject.Data{
     public class AreaDTO
 {
+    [Key] 
     public int AreaID { get; set; }
 
     [Required]

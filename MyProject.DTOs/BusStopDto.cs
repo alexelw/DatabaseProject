@@ -3,6 +3,7 @@ using System.ComponentModel.DataAnnotations;
 namespace MyProject.Data{
     public class BusStopDTO
 {
+    [Key] 
         public int BusStopID { get; set; } 
         [MaxLength(50)] 
         public required string BusStopName { get; set; }

@@ -3,8 +3,7 @@ using MyProject.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container
 builder.Services.AddDbContext<AppDbContext>(options =>
-    options.UseSqlite("Data Source=appdb.db")); // Replace with your desired database provider
+    options.UseNpgsql("Host=localhost;Database=MyDatabase;Username=myuser;Password=password"));
 
 var app = builder.Build();
