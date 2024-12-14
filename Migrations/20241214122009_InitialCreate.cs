@@ -138,7 +138,7 @@ namespace MyProject.Migrations
                 name: "BusLocations",
                 columns: table => new
                 {
-                    journeyID = table.Column<int>(type: "integer", nullable: false)
+                    BusLocationID = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
                     BusID = table.Column<int>(type: "integer", nullable: false),
                     CurrentRouteID = table.Column<int>(type: "integer", nullable: false),
@@ -150,7 +150,7 @@ namespace MyProject.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_BusLocations", x => x.journeyID);
+                    table.PrimaryKey("PK_BusLocations", x => x.BusLocationID);
                     table.ForeignKey(
                         name: "FK_BusLocations_Buses_BusID",
                         column: x => x.BusID,
@@ -183,7 +183,7 @@ namespace MyProject.Migrations
                     ActDeparture = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
                     ExpArrival = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
                     ActArrival = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
-                    BusRouteRouteID = table.Column<int>(type: "integer", nullable: false)
+                    BusRouteRouteID = table.Column<int>(type: "integer", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -198,8 +198,7 @@ namespace MyProject.Migrations
                         name: "FK_ScheduledJourneys_Routes_BusRouteRouteID",
                         column: x => x.BusRouteRouteID,
                         principalTable: "Routes",
-                        principalColumn: "RouteID",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "RouteID");
                 });
 
             migrationBuilder.CreateTable(

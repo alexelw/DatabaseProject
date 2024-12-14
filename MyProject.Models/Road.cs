@@ -14,5 +14,4 @@ namespace MyProject.Models{
     public ICollection<Roadwork> Roadworks { get; set; } =new List<Roadwork>();
 
 }
-
 }

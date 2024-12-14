@@ -12,7 +12,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace MyProject.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20241212180356_InitialCreate")]
+    [Migration("20241214122009_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -72,11 +72,11 @@ namespace MyProject.Migrations
 
             modelBuilder.Entity("MyProject.Models.BusLocation", b =>
                 {
-                    b.Property<int>("journeyID")
+                    b.Property<int>("BusLocationID")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("integer");
 
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("journeyID"));
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("BusLocationID"));
 
                     b.Property<int>("BusID")
                         .HasColumnType("integer");
@@ -99,7 +99,7 @@ namespace MyProject.Migrations
                     b.Property<int>("Status")
                         .HasColumnType("integer");
 
-                    b.HasKey("journeyID");
+                    b.HasKey("BusLocationID");
 
                     b.HasIndex("BusID");
 
@@ -257,7 +257,7 @@ namespace MyProject.Migrations
                     b.Property<int>("BusID")
                         .HasColumnType("integer");
 
-                    b.Property<int>("BusRouteRouteID")
+                    b.Property<int?>("BusRouteRouteID")
                         .HasColumnType("integer");
 
                     b.Property<DateTime>("ExpArrival")
@@ -412,9 +412,7 @@ namespace MyProject.Migrations
 
                     b.HasOne("MyProject.Models.BusRoute", "BusRoute")
                         .WithMany("ScheduledJourneys")
-                        .HasForeignKey("BusRouteRouteID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("BusRouteRouteID");
 
                     b.Navigation("Bus");
 

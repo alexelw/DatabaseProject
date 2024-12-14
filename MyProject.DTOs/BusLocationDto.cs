@@ -4,8 +4,8 @@ using MyProject.Enums;
 namespace MyProject.Data{
     public class BusLocationDTO
 {
-        [Key] // Mark journeyID as the primary key
-        public int journeyID { get; set; }
+        [Key] 
+        public int BusLocationID { get; set; }
         public int BusID { get; set; }
         public int CurrentRouteID { get; set; }
         public int CurrentRoadID { get; set; }

@@ -5,7 +5,6 @@ namespace MyProject.Enums
         Standard = 1,
         Mini = 2,
         DoubleDecker = 3,
-        Electric = 4
     }
     public enum BusStatus
     {

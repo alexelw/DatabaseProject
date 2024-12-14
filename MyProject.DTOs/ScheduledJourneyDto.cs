@@ -11,7 +11,9 @@ namespace MyProject.Data{
     public DateTime? ActDeparture { get; set; }
     public DateTime ExpArrival { get; set; }
     public DateTime? ActArrival { get; set; }
-    public required BusDTO busDTO { get; set; }
-    public required BusRouteDTO busRouteDTO { get; set; }
+
+    public BusDTO? BusDTO { get; set; }
+    public BusRouteDTO? BusRouteDTO{ get; set; }
+
 }
 }

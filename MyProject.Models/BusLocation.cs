@@ -6,7 +6,7 @@ namespace MyProject.Models{
     public class BusLocation
 {
         [Key] // Mark journeyID as the primary key
-        public int journeyID { get; set; }
+        public int BusLocationID { get; set; }
         public int BusID { get; set; }
         public int CurrentRouteID { get; set; }
         public int CurrentRoadID { get; set; }
