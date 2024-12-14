@@ -1,5 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using MyProject.Data;
+using MyProject.Data.Repositories;
+using MyProject.Services;
 using MyProject.Data.Seeders;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -13,6 +15,17 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 
 // Register the DbSeeder service
 builder.Services.AddTransient<IDbSeeder, DbSeederService>();
+
+// Register Repository and Service for Road
+builder.Services.AddScoped<IRoadRepository, RoadRepository>(); // Register Road Repository
+builder.Services.AddScoped<RoadService>(); // Register Road Service
+
+// Register Repository and Service for BusStop
+builder.Services.AddScoped<IBusStopRepository, BusStopRepository>(); // Register Bus Stop Repository
+builder.Services.AddScoped<BusStopService>(); // Register Bus Stop Service
+
+builder.Services.AddScoped<IRouteRepository, RouteRepository>();
+builder.Services.AddScoped<RouteService>();
 
 var app = builder.Build();
 
