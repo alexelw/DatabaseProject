@@ -27,6 +27,9 @@ builder.Services.AddScoped<BusStopService>(); // Register Bus Stop Service
 builder.Services.AddScoped<IRouteRepository, RouteRepository>();
 builder.Services.AddScoped<RouteService>();
 
+builder.Services.AddAutoMapper(typeof(MappingProfile)); 
+builder.Services.AddScoped<DataDisplayService>();
+
 var app = builder.Build();
 
 // Seed the database on application startup
