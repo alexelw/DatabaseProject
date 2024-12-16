@@ -7,7 +7,7 @@ namespace MyProject.Data{
     public int RoadID { get; set; } 
     [Required]
     [MaxLength(50)] 
-    public string RoadName { get; set; }
+    public required string RoadName { get; set; }
 
     public ICollection<TrafficConditionDTO> TrafficConditionDTOs { get; set; } =new List<TrafficConditionDTO>();
     public ICollection<RoadworkDTO> RoadworkDTOs { get; set; } =new List<RoadworkDTO>();

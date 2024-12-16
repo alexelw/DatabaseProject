@@ -7,7 +7,7 @@ namespace MyProject.Models{
     public int RoadID { get; set; } 
     [Required]
     [MaxLength(50)] 
-    public string RoadName { get; set; }
+    public required string RoadName { get; set; }
 
 
     public ICollection<TrafficCondition> TrafficConditions { get; set; } =new List<TrafficCondition>();

@@ -8,9 +8,9 @@ namespace MyProject.Data.Seeders
     {
         public void Seed(AppDbContext context)
         {
-            SeedAreas(context);
-            SeedBuses(context);
-            SeedBusStops(context);
+            //SeedAreas(context);
+            //SeedBuses(context);
+            //SeedBusStops(context);
             SeedBusRoutes(context);
             SeedPopularities(context);
             SeedRoads(context);
